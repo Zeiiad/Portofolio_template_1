@@ -183,10 +183,15 @@ header .links ul li:not(:last-child) a {
 /* End Header*/ 
 /* Start Landing section */
 .landing {
-    background-image: url(../imgs/m2.jpg);
+    background-image: linear-gradient(white, transparent), 
+                      url(../imgs/m2.jpg);
     background-size: cover;
     height: calc(100vh - 64px);
     position: relative;
+}
+
+@media (max-width: 767px) {
+
 }
 
 .landing .intro-text {
@@ -195,19 +200,36 @@ header .links ul li:not(:last-child) a {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 320px;
+    width: 420px;
     max-width: 100%;
 
 }
 .landing .intro-text h1 {
     margin: 0;
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 700;
+    font-size: 70px;
     color: var(--main-color);
 }
 .landing .intro-text p {
-    font-size: 19px;
+    font-size: 22px;
     line-height:  1.8;
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    .landing .intro-text {
+        width: 320px;
+        max-width: 100%;
+    }
+    
+    .landing .intro-text h1 {
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    .landing .intro-text p {
+        font-size: 19px;
+    }
 }
 /* End Landing section */
 /* Start Features */
